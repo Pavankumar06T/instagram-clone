@@ -1,0 +1,87 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+  max-width: 935px;
+  margin: 60px auto 0;
+  width: 100%;
+}
+
+.feed {
+  width: 100%;
+  max-width: 614px;
+  margin: 0 auto;
+}
+
+.post {
+  background: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 16px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.post-header img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.post-image {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.post-caption {
+  margin-bottom: 8px;
+}
+
+.post-comments {
+  margin-bottom: 8px;
+}
+
+.post-comments div {
+  margin-bottom: 4px;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #ddd;
+}
+
+.menu-item {
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+  color: #e1306c;
+}
