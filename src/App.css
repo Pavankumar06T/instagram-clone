@@ -1,6 +1,14 @@
 .app-container {
-  display: flex;
-  min-height: 100vh;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+        min-height: auto;
+    }
 }
 
 .sidebar {
@@ -17,20 +25,15 @@
   width: 30%;
 }
 
+/* Responsive for mobile */
 @media (max-width: 768px) {
   .app-container {
     flex-direction: column;
   }
   .sidebar,
+  .main-content,
   .suggestions {
     width: 100%;
-    order: 1;
-  }
-  .main-content {
-    width: 100%;
-    order: 2;
-  }
-  .suggestions {
-    order: 3;
+    min-height: auto;
   }
 }

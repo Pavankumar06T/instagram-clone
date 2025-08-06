@@ -7,15 +7,15 @@ import './App.css';
 
 function App() {
   return (
-    <div className="d-flex">
-      <div style={{ width: '18%' }}>
+    <div className="app-container">
+      <div className="sidebar">
         <Sidebar />
       </div>
-      <div style={{ width: '52%', backgroundColor: '#f9f9f9', minHeight: '100vh' }}>
+      <div className="main-content">
         <StoryBar />
         <Feed />
       </div>
-      <div style={{ width: '30%' }}>
+      <div className="suggestions">
         <Suggestions />
       </div>
     </div>
