@@ -80,7 +80,7 @@
 }
 
 .suggestions-btn {
-  right: 90px;
+  right: 24px;
 }
 
 /* StoryBar horizontal scroll */
@@ -131,5 +131,37 @@
     overflow-x: auto;
     display: flex;
     gap: 12px;
+  }
+}
+
+.mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 56px;
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  padding-left: 16px;
+}
+
+.mobile-logo {
+  width: 120px;
+  height: auto;
+}
+
+.main-content {
+  margin-top: 56px; /* Push content below header on mobile */
+}
+
+@media (min-width: 769px) {
+  .mobile-header {
+    display: none;
+  }
+  .main-content {
+    margin-top: 0;
   }
 }

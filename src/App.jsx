@@ -3,19 +3,19 @@ import Sidebar from './Components/Sidebar';
 import Feed from './Components/Feed';
 import Suggestions from './Components/Suggestions';
 import StoryBar from './Components/StoryBar';
+import myImage from './assets/Instagram_txt.png';
 import './App.css';
 
 function App() {
-  const [showSidebar, setShowSidebar] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   return (
     <div className="app-container">
-      {/* Sidebar Drawer for mobile */}
-      <div className={`sidebar-drawer ${showSidebar ? 'open' : ''}`}>
-        <Sidebar />
-        <button className="close-btn" onClick={() => setShowSidebar(false)}>Close</button>
+      {/* Mobile Header */}
+      <div className="mobile-header mobile-only">
+        <img src={myImage} alt="Instagram Logo" className="mobile-logo" />
       </div>
+
       {/* Suggestions Drawer for mobile */}
       <div className={`suggestions-drawer ${showSuggestions ? 'open' : ''}`}>
         <Suggestions />
@@ -28,6 +28,7 @@ function App() {
         <Feed />
       </div>
 
+      {/* Desktop Sidebar & Suggestions */}
       <div className="sidebar desktop-only">
         <Sidebar />
       </div>
@@ -35,10 +36,12 @@ function App() {
         <Suggestions />
       </div>
 
-      <button className="floating-btn sidebar-btn mobile-only" onClick={() => setShowSidebar(true)}>
-        ☰
-      </button>
-      <button className="floating-btn suggestions-btn mobile-only" onClick={() => setShowSuggestions(true)}>
+      {/* Floating Suggestions Button for mobile */}
+      <button
+        className="floating-btn suggestions-btn mobile-only"
+        onClick={() => setShowSuggestions(true)}
+        aria-label="Show Suggestions"
+      >
         💡
       </button>
     </div>
