@@ -12,6 +12,19 @@
 
 .sidebar-logo {
   margin-bottom: 24px;
+  text-align: left;
+}
+
+.sidebar-logo-mobile {
+  display: none;
+  width: 100vw;
+  background: #fff;
+  text-align: center;
+  padding: 12px 0 4px 0;
+  border-bottom: 1px solid #dbdbdb;
+  position: sticky;
+  top: 0;
+  z-index: 501;
 }
 
 .sidebar-menu, .sidebar-bottom {
@@ -69,7 +82,12 @@
     padding: 0;
     background: transparent;
   }
-  .sidebar-logo,
+  .sidebar-logo {
+    display: none !important;
+  }
+  .sidebar-logo-mobile {
+    display: block !important;
+  }
   .sidebar-menu,
   .sidebar-bottom {
     display: none !important;

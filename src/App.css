@@ -6,7 +6,10 @@
   position: relative;
 }
 
-/* Desktop only styles for .sidebar and .suggestions can be added here if needed */
+.sidebar,
+.suggestions {
+  /* Desktop only */
+}
 
 .main-content {
   width: 52%;
