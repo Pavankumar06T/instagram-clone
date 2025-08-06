@@ -7,12 +7,14 @@
   background: #fff;
   border-top: 1px solid #dbdbdb;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 200px;
   z-index: 1000;
 }
 
 .bottom-navbar i {
   font-size: 22px;
   color: #262626;
+  margin: 0 25px;
 }

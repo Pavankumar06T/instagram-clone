@@ -3,7 +3,7 @@ import Sidebar from './Components/Sidebar';
 import Feed from './Components/Feed';
 import Suggestions from './Components/Suggestions';
 import StoryBar from './Components/StoryBar';
-import BottomNavbar from './Components/BottomNavbar'; // ✅ Add this
+import BottomNavbar from './Components/BottomNavbar';
 import myImage from './assets/Instagram_txt.png';
 import './App.css';
 
