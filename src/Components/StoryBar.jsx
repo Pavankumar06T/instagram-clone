@@ -32,8 +32,10 @@ function StoryBar() {
             className={`story ${viewed[story.name] ? 'viewed' : ''}`}
             onClick={() => handleClick(story)}
           >
-            <img src={story.avatar} alt={story.name} />
-            <p>{story.name}</p>
+            <div className="story-avatar">
+              <img src={story.avatar} alt={story.name} />
+            </div>
+            <p className="story-name">{story.name}</p>
           </div>
         ))}
       </div>
