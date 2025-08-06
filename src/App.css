@@ -1,26 +1,30 @@
+/* =============== Base App Container =============== */
 .app-container {
   display: flex;
-  min-height: 100vh;
   flex-direction: row;
   background: #fafafa;
   position: relative;
+  min-height: 100vh;
 }
 
+/* =============== Desktop Sidebar & Suggestions =============== */
 .sidebar,
 .suggestions {
-  /* Desktop only */
+  /* Only visible on desktop */
 }
 
+/* =============== Main Content =============== */
 .main-content {
-  width: 52%;
   background-color: #fafafa;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 24px 0;
   display: flex;
   flex-direction: column;
+  padding: 24px 0;
+  margin: 0 auto;
+  width: 52%;
+  min-height: 100vh;
 }
 
+/* =============== Visibility Control =============== */
 .desktop-only {
   display: block;
 }
@@ -29,8 +33,7 @@
   display: none;
 }
 
-/* Drawers for mobile */
-.sidebar-drawer,
+/* =============== Suggestions Drawer =============== */
 .suggestions-drawer {
   display: none;
   position: fixed;
@@ -41,12 +44,11 @@
   height: 100vh;
   background: #fff;
   z-index: 200;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.15);
-  transition: transform 0.3s;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
   transform: translateX(-100%);
 }
 
-.sidebar-drawer.open,
 .suggestions-drawer.open {
   display: block;
   transform: translateX(0);
@@ -63,7 +65,7 @@
   cursor: pointer;
 }
 
-/* Floating buttons for mobile */
+/* =============== Floating Button =============== */
 .floating-btn {
   position: fixed;
   bottom: 80px;
@@ -74,7 +76,7 @@
   width: 56px;
   height: 56px;
   font-size: 24px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   z-index: 300;
   cursor: pointer;
 }
@@ -83,20 +85,61 @@
   right: 24px;
 }
 
-/* StoryBar horizontal scroll */
+/* =============== StoryBar =============== */
 .story-bar {
   display: flex;
   overflow-x: auto;
   padding: 16px 0;
   background: #fff;
   border-bottom: 1px solid #dbdbdb;
+  gap: 10px;
 }
 
 .story-bar::-webkit-scrollbar {
   display: none;
 }
 
-/* Responsive for mobile */
+/* =============== Mobile Header =============== */
+.mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 56px;
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  padding-left: 16px;
+}
+
+.mobile-logo {
+  width: 120px;
+  height: auto;
+}
+
+/* =============== Bottom Navbar for Mobile =============== */
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background: #fff;
+  border-top: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+.bottom-navbar i {
+  font-size: 22px;
+  color: #262626;
+}
+
+/* =============== Media Queries for Mobile =============== */
 @media (max-width: 768px) {
   .app-container {
     flex-direction: column;
@@ -106,9 +149,9 @@
 
   .main-content {
     width: 100%;
-    min-height: 100vh;
     padding: 8px 0 64px 0;
     margin: 0;
+    margin-top: 56px; /* Push below header */
   }
 
   .sidebar,
@@ -131,37 +174,5 @@
     overflow-x: auto;
     display: flex;
     gap: 12px;
-  }
-}
-
-.mobile-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 56px;
-  background: #fff;
-  border-bottom: 1px solid #dbdbdb;
-  display: flex;
-  align-items: center;
-  z-index: 1001;
-  padding-left: 16px;
-}
-
-.mobile-logo {
-  width: 120px;
-  height: auto;
-}
-
-.main-content {
-  margin-top: 56px; /* Push content below header on mobile */
-}
-
-@media (min-width: 769px) {
-  .mobile-header {
-    display: none;
-  }
-  .main-content {
-    margin-top: 0;
   }
 }
