@@ -1,10 +1,8 @@
 import React from 'react';
-import Sidebar from './Components/sidebar';
-// import './App.css';
+import Sidebar from './Components/Sidebar';
 import Feed from './Components/Feed';
 import Suggestions from './Components/Suggestions';
 import StoryBar from './Components/StoryBar';
-// import instagram_txt from './instagram_txt.png';
 
 function App() {
   return (

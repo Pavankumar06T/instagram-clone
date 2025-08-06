@@ -4,7 +4,7 @@ import myImage from "../assets/Instagram_txt.png";
 
 function Sidebar() {
   return (
-    <div className="sidebar d-flex flex-column justify-content-between p-3 min-vh-100">
+    <div className="Sidebar d-flex flex-column justify-content-between p-3 min-vh-100">
       <div>
         <img src={myImage} alt="Instagram Logo" className="mb-4" style={{ width: '120px' }} />
 
