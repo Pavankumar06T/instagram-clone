@@ -1,0 +1,36 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 18%;
+}
+
+.main-content {
+  width: 52%;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.suggestions {
+  width: 30%;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .sidebar,
+  .suggestions {
+    width: 100%;
+    order: 1;
+  }
+  .main-content {
+    width: 100%;
+    order: 2;
+  }
+  .suggestions {
+    order: 3;
+  }
+}
